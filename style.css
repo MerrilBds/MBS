@@ -191,7 +191,10 @@ section{
 .project-card{
     width: 200px;
     position: relative;
-     box-shadow: 0 0 10px rgb(255, 255, 255); /
+    box-shadow: 0 0 10px rgb(255, 255, 255); /
+}
+.project-card.active{
+    border: solid 10px whitesmoke;
 }
 .project-img{
    width: 100%;
@@ -207,9 +210,9 @@ section{
     transition:0.5s;
     opacity: 0;
 }
-.project-card:hover .tags{
+.project-card:hover:not(.active) .tags{
     opacity: 1;
 }
-.project-card:hover .project-img{
+.project-card:hover:not(.active) .project-img{
     opacity: 0.6;
 }
