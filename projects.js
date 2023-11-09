@@ -44,7 +44,7 @@ let projects = [
     {
         name: "AfroStuff",
         about: 'this is a site of a fictitious fast food company based on African flavors.',
-        tags: '#Frontend, #JavaScript',
+        tags: '#Frontend, #JavaScript, #React',
         live: "https://afrostuff.netlify.app/",
         github: 'https://github.com/MerrilBds/AfroStuff',
         image: 'img/afro.png',
