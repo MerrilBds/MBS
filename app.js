@@ -1,6 +1,37 @@
 //project
 let projectCards = [...document.querySelectorAll('.project-card')];
+let projectName = document.querySelector('.project-details .name');
+let projectImage = document.querySelector('.project-details .image');
+let projectDetail = document.querySelector('.project-details .details');
 
+//buttons
+let liveBtn = document.querySelector('#live-btn');
+let githubBtn = document.querySelector('#github-btn');
+let progressTrack = [...document.querySelectorAll('.progress-track')];
+
+projectCards.map((project, i) => {
+    project.addEventListener('click', () => {
+        projectCards.map(card => card.classList.remove('active'));
+
+        project.classList.add('active');
+        let data = JSON.parse(project.getAttribute('data-info'));
+        setUpProjectInfo(data);
+       
+    })
+})
+
+const setUpProjectInfo = (data) => {
+    projectImage.src = data.image;
+    projectName.innerHTML = data.name;
+    projectDetail.innerHTML = data.about;
+    liveBtn.href = data.live;
+    githubBtn.href = data.github;
+
+    progressTrack.map((item) => {
+        let progress = item.querySelector('.progress');
+        progress.style.width = data.languages[item.getAttribute('data-name')];
+    })
+}
 //filters
 const filters = [...document.querySelectorAll('.filter-btn')];
 
@@ -22,4 +53,15 @@ filters.map((btn, i) => {
             }
         })
     })
+})
+projectCards[0].classList.add('active');
+setUpProjectInfo(projects[0]);
+//transparent nav effect on Scroll
+const navbar = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+    if (scrollY > 195) {
+        navbar.classList.add('bg');
+    } else {
+        navbar.classList.remove('bg');
+    }
 })

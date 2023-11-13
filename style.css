@@ -7,6 +7,8 @@
 
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body{
@@ -303,7 +305,11 @@ section{
 .progress{
     transition:1s;
     width:50%;
-    background: goldenrod;
+    background: rgba(255, 255, 255, 0.9);
     height: 100%;
     border-radius: 10px;
+}
+
+nav.bg{
+    background-color: #000;
 }

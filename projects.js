@@ -8,9 +8,15 @@ let projects = [
         github: 'https://github.com/MerrilBds/Portfolio1',
         image: 'img/portfolione.png',
         languages: {
-            html: '25.2%',
-            css: '46.0%',
-            javascript: '28.8%',
+            html: '25%',
+            css: '46%',
+            javascript: '29%',
+            java: '0%',
+            reactnative: '0%',
+            python: '0%',
+            nodejs: '0%',
+            reactjs: '0%',
+            sql: '0%',
         }
     },
     {
@@ -21,9 +27,15 @@ let projects = [
         github: 'https://github.com/MerrilBds/myBook',
         image: 'img/merrilbook.png',
         languages: {
-            html: '58.6%',
-            css: '21.3%',
-            javascript: '20.1%',
+            html: '59%',
+            css: '21%',
+            javascript: '20%',
+            java: '0%',
+            reactnative: '0%',
+            python: '0%',
+            nodejs: '0%',
+            reactjs: '0%',
+            sql: '0%',
         }
 
     },
@@ -35,9 +47,15 @@ let projects = [
         github: 'https://github.com/MerrilBds/WEB-prv/tree/master/Parallax',
         image: 'img/plx.png',
         languages: {
-            html: '2.4%',
-            css: '57.7%',
-            javascript: '39.9%',
+            html: '11%',
+            css: '58%',
+            javascript: '29%',
+            java: '0%',
+            reactnative: '0%',
+            python: '0%',
+            nodejs: '0%',
+            reactjs: '0%',
+            sql: '0%',
         }
 
     },
@@ -49,9 +67,15 @@ let projects = [
         github: 'https://github.com/MerrilBds/AfroStuff',
         image: 'img/afro.png',
         languages: {
-            html: '38.2%',
-            css: '41.1%',
-            javascript: '20.7%',
+            html: '38%',
+            css: '41%',
+            javascript: '21%',
+            java: '0%',
+            reactnative: '0%',
+            python: '0%',
+            nodejs: '0%',
+            reactjs: '0%',
+            sql: '0%',
         }
     }
 ];
@@ -59,7 +83,7 @@ let projects = [
 let projectGallery = document.querySelector('.project-gallery');
 const createProjects = (data) => {
     projectGallery.innerHTML += `
-    <a href="#project-info" class="project-card" data-tags="${data.tags}">
+    <a href="#project-info" class="project-card" data-tags="${data.tags}" data-info='${JSON.stringify(data)}'>
             <img src="${data.image}" class="project-img" alt="MerrilBook">
             <span class="tags">${data.tags}</span>
         </a>
