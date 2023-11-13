@@ -59,7 +59,7 @@ let projects = [
 let projectGallery = document.querySelector('.project-gallery');
 const createProjects = (data) => {
     projectGallery.innerHTML += `
-    <a href="#" class="project-card" data-tags="${data.tags}">
+    <a href="#project-info" class="project-card" data-tags="${data.tags}">
             <img src="${data.image}" class="project-img" alt="MerrilBook">
             <span class="tags">${data.tags}</span>
         </a>
