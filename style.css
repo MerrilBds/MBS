@@ -587,3 +587,196 @@ textarea{
     text-transform: capitalize;
     background-color: #1A1A1A;
 }
+
+/* media query */
+@media screen and(max-width: 1200px){
+    html{
+        font-size: 15px;
+    }
+    .project-gallery{
+        grid-template-columns: repeat(5,1fr);
+    }
+    .project-card{
+        height: 175px;
+    }
+    .contact-container{
+        position: relative;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    .contact-details{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .contact-form{
+        width: 100%;
+    }
+
+}
+@media screen and(max-width: 992px){
+    .hero-headline{
+        font-size: 3.5rem;
+    }
+    .filter-btn{
+        padding: 10px 15px;
+    }
+    .project-gallery{
+        grid-template-columns: repeat(4,1fr);
+    }
+     .project-card{
+        height: 150px;
+    }
+    #project-info{
+          grid-template-columns: repeat(1,1fr);
+    }
+    .cl-card{
+        display: none;
+    }
+    .cl-card:nth-child(1),
+    .cl-card:nth-child(2),
+    .cl-card:nth-child(3){
+        display: block;
+    }
+    .cl-card:nth-child(1)::after{
+      content: '** Few more are hidden**';
+      color: #fff;
+      opacity: 0.5;
+    }
+    .about-me-container{
+        align-items: center;
+        flex-direction: column;
+    }
+    .about-image-container{
+        width: 100%;
+        min-width:300px;
+        height: 500px;
+    }
+    .about-img{
+        object-fit: contain;
+    }
+    .personal-info{
+        width: 100%;
+    }
+    .edu-exp-container{
+     grid-template-columns: 1fr;
+    }
+    .contact-container{
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+    .contact-details{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media screen and(max-width: 735px){
+    nav{
+        background-color: #000;
+    }
+    .toggle-btn{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 2px;
+        position: relative;
+        cursor: pointer;
+    }
+    .toggle-btn span{
+        width: 80%;
+        position: absolute;
+        height: 2px;
+        background-color: #FFF;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: 0.5s;
+    }
+    .toggle-btn span:nth-child(1){
+      top: 30%;
+    }
+    .toggle-btn span:nth-child(3){
+      top: 70%;
+    }
+    .toggle-btn.active span:nth-child(1){
+       top: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+    .toggle-btn.active span:nth-child(3){
+       top: 50%;
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+     .toggle-btn.active span:nth-child(2){
+       opacity: 0;
+    }
+    .links-container{
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        left: 0;
+        gap: 0;
+        opacity: 0;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+    .links-container.active{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .links{
+        display: block;
+        width: 100%;
+        padding: 20px 10vw;
+        background-color: #000;
+    }
+    .links:hover{
+        opacity: 1;
+        background-color: #000;
+    }
+    .project-gallery{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .skill-card{
+        width: 120px;
+        height: 190px;
+        padding: 10px 0;
+    }
+    .skill-image{
+        width: 70px;
+        object-fit: contain;
+    }
+    .skill-name{
+        font-size: 1rem;
+    }
+    .contact-details{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+@media screen and(max-width: 500px){
+    .hero-headline{
+        font-size: 3rem;
+
+    }
+    .hero-secondary-line{
+        font-size: 1.2rem;
+        width: 80%;
+        display: block;
+        margin: 25px auto 50px;
+        line-height: 2rem;
+    }
+    .project-gallery{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .name-email-input{
+        flex-direction: column;
+    }
+    input:nth-child(1){
+        margin-bottom: 0;
+    }
+ 
+}
+.toggle-btn{
+    display: none;
+}
