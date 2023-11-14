@@ -16,6 +16,33 @@ body{
     font-family: 'roboto', sans-serif;
     overflow-x: hidden;
 }
+/* Light Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    animation: lightEffect 3s infinite;
+}
+
+@keyframes lightEffect {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
 
 /* navbar */
 
@@ -252,6 +279,7 @@ section{
     transform: scale(1.1); /* Effet de zoom au survol */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre légère au survol */
 }
+/* Btn*/
 .btn{
     padding: 15px 30px;
     width: fit-content;
@@ -314,6 +342,7 @@ nav.bg{
     background-color: #000;
 }
 
+/* About */
 .about-me-container{
     margin-top: 100px;
     gap: 100px;
@@ -363,6 +392,7 @@ nav.bg{
     font-size: 2rem;
     margin-right: 20px;
 }
+/* skilss */
 .skills{
     position: relative;
     margin: 100px 0;
@@ -452,4 +482,108 @@ background-color: #f37d6d;
 }
 .skill-card:hover .skill-image{
     transform: scale(1.1) translateY(-10px);
+}
+/* Education and experiences */
+.edu-exp-container{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ gap:60px;
+ position: relative;
+ margin-top: 100px;
+}
+.edu-exp-card{
+    padding-top: 15px;
+    position: relative;
+    color: whitesmoke;
+    padding-left: 60px;
+    margin-bottom: 50px;
+}
+.card-icon{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    color: #000;
+    background-color: #FFF;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
+.card-title{
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 40px 0 30px;
+}
+.card-title span{
+    opacity: 0.5s;
+}
+.card-info{
+ line-height: 1.5rem;
+}
+/*Contact Section*/
+.contact-container{
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+}
+.contact-details{
+    width: 25%;
+    color: #FFF;
+}
+.contact-card{
+padding-top: 10px;
+position: relative;
+padding-left: 60px;
+margin-bottom: 40px;
+}
+.card-title{
+    text-transform: capitalize;
+    opacity: 0.5;
+}
+.contact-form{
+    width: 75%;
+}
+input, textarea{
+    padding: 20px;
+    width: 100%;
+    background-color: #1A1A1A;
+    color: #FFF;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom : 20px;
+}
+.name-email-input{
+    gap : 20px;
+    display: flex;
+}
+textarea{
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    height: 300px;
+}
+.contact-form .btn{
+   border: none;
+   margin: 0;
+   cursor: pointer;
+   font-size: 1rem;
+}
+.contact-form:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.credit{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    text-transform: capitalize;
+    background-color: #1A1A1A;
 }
