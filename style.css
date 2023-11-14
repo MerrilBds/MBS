@@ -754,6 +754,48 @@ textarea{
     }
 
 }
+@media only screen and (max-width: 768px) {
+    nav {
+        text-align: center; /* Aligner le texte au centre pour les petits écrans */
+    }
+
+    .links-container {
+        display: none; /* Cacher les liens par défaut sur les petits écrans */
+        flex-direction: column; /* Aligner les liens verticalement */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Couleur de fond pour la lisibilité */
+        z-index: 1;
+    }
+
+    .links-container.active {
+        display: flex; /* Afficher les liens lorsqu'ils sont activés par le bouton de bascule */
+    }
+
+    .link-items {
+        padding: 15px;
+        border-bottom: 1px solid #fff; /* Ligne de séparation entre les liens */
+    }
+
+    .toggle-btn {
+        display: block; /* Afficher le bouton de bascule sur les petits écrans */
+        cursor: pointer;
+    }
+
+    .toggle-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
 @media screen and(max-width: 500px){
     .hero-headline{
         font-size: 3rem;
