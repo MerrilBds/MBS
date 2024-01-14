@@ -23,7 +23,7 @@ let projects = [
         name: 'MerrilBook',
         about: 'It is a small project that features a 3D book on a landing page.',
         tags: '#JavaScript, #Frontend',
-        live: "https://merrilbook.netlify.app/index.html",
+        live: "https://merrilbooks.netlify.app/index.html",
         github: 'https://github.com/MerrilBds/myBook',
         image: 'img/merrilbook.png',
         languages: {
